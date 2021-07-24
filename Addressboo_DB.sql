@@ -32,3 +32,9 @@ SET city = 'Bangalore',
 state = 'Karnataka',
 zip = 852369
 WHERE first_name = 'Minal';
+
+#UC5 To delete a contact using name
+delete from addressbook where first_name='Vaishnavi';
+select * from addressbook;
+
+
