@@ -14,8 +14,6 @@ zip int not null,
 phone_number long not null,
 email varchar(50) not null
 );
-select * from addressbook;
-
 #UC3
 #Add data to Table 
 insert into addressbook(first_name,last_name,address,city,state,zip,phone_number,email) values
@@ -25,6 +23,12 @@ insert into addressbook(first_name,last_name,address,city,state,zip,phone_number
 ('Neha','Rathi','Maya nagar','Bhopal','MP',534204,8330911935,'neharathi89@gmail.com'),
 ('Vaishnavi','Popat','Sawant','Mumbai','Maharastra',852214,9876543210,'vaishnavipopat@gmail.com'),
 ('Ayur','Ninawe','Bommanahalli','Banagalore','Karnataka',725489,9139191921,'ayur567@gmail.com');
+
 select * from addressbook;
 
-
+#uc4
+UPDATE addressbook
+SET city = 'Bangalore',
+state = 'Karnataka',
+zip = 852369
+WHERE first_name = 'Minal';
