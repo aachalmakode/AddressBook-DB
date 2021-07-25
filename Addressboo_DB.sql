@@ -4,7 +4,7 @@ show databases;
 use addressbook;
 
 #UC2-creates a Table
-create table addressbook (
+create table addressbook(
 first_name varchar(31) not null,
 last_name varchar(31) not null,
 address varchar(150) not null,
@@ -14,6 +14,7 @@ zip int not null,
 phone_number long not null,
 email varchar(50) not null
 );
+
 #UC3
 #Add data to Table 
 insert into addressbook(first_name,last_name,address,city,state,zip,phone_number,email) values
