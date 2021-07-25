@@ -41,3 +41,6 @@ select * from addressbook;
 #UC6  To retrieve contacts by city / state
 select * from  addressbook where city='Mumbai' or state='MP';
 
+#UC7-Size of book by city and state
+select state, count(first_name) from addressbook group by state; #Count by state
+select city, count(first_name) from addressbook group by city; #Count by city
