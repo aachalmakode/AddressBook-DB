@@ -38,4 +38,6 @@ WHERE first_name = 'Minal';
 delete from addressbook where first_name='Vaishnavi';
 select * from addressbook;
 
+#UC6  To retrieve contacts by city / state
+select * from  addressbook where city='Mumbai' or state='MP';
 
