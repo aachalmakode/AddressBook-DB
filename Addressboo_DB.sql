@@ -56,6 +56,7 @@ update addresbook set type='FRIEND' where first_name='Yash' or first_name='Minal
 update addressbook set type='PROFESSION' where first_name='Neha' or first_name='Vaishnavi';
 select * from addressbook;
 
+
 #UC10 To get num contacts by type
 select type, count(first_name) from addressbook group by type;
  select * from addressbook;
