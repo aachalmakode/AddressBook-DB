@@ -47,3 +47,11 @@ select city, count(first_name) from addressbook group by city;
 
 #UC8  To sort the contacts for given city
 select * from addressbook where city="Mumbai" order by first_name asc;
+
+#UC9 To Identify each Book with Name and Type
+alter table addressbook add type varchar(31);
+select * from addressbook;
+update addressbook set type='FAMILY' where first_name='Aachal' or first_name='Ayur';
+update addresbook set type='FRIEND' where first_name='Yash' or first_name='Minal';
+update addressbook set type='PROFESSION' where first_name='Neha' or first_name='Vaishnavi';
+select * from addressbook;
