@@ -68,7 +68,7 @@ UPDATE address_book SET contact_type = 'FAMILI' WHERE first_name = 'Aachal';
 UPDATE address_book SET contact_type = 'FRIEND' WHERE first_name = 'Neha';
 
 select * from addressbook1.addressbook;
-
+#uc12 ER Diagram
 CREATE TABLE People(
      PersonId int primary key not null,
 	 FirstName varchar(20) not null,
