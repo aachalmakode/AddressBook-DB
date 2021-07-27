@@ -1,7 +1,6 @@
-#uc1
-create database addressbook;
+create database addressbook1;
 show databases;
-use addressbook;
+use addressbook1;
 
 #UC2-creates a Table
 create table addressbook(
@@ -18,6 +17,7 @@ email varchar(50) not null
 #UC3
 #Add data to Table 
 insert into addressbook(first_name,last_name,address,city,state,zip,phone_number,email) values
+
 ('Aachal','Makode','Gadge Nagar','Amravati','Maharashtra',444604,9097453278,'aachal@gmail.com'),
 ('Minal','Rathod','Sindh','Hyderabad','Andhra',444608,9493213357,'minal@gmail.com'),
 ('Yash','Sahu','Dharma','Mumbai','Maharashtra',826984,9121522521,'yashsahuk@gmail.com'),
@@ -59,7 +59,7 @@ select * from addressbook;
 #UC10 To get num contacts by type
 select type, count(first_name) from addressbook group by type;
  select * from addressbook;
- 
+
 #UC11 Ability to add Friend and family to each contact by adding a new column of name contact type
 ALTER TABLE addressbook ADD contact_type VARCHAR(50);
 UPDATE address_book SET contact_type = 'FRIEND' WHERE first_name = 'Yash';
@@ -67,5 +67,30 @@ UPDATE address_book SET contact_type = 'FAMILY' WHERE first_name = 'Yash';
 UPDATE address_book SET contact_type = 'FAMILI' WHERE first_name = 'Aachal';
 UPDATE address_book SET contact_type = 'FRIEND' WHERE first_name = 'Neha';
 
-select * from addressbook;
+select * from addressbook1.addressbook;
 
+CREATE TABLE People(
+     PersonId int primary key not null,
+	 FirstName varchar(20) not null,
+     LastName varchar(20) not null,
+     PhoneNumber numeric(10),
+     Email VARCHAR(50)
+     );
+    
+    CREATE TABLE Address(
+     PersonId int,
+     PersonAddress varchar(50) not null,
+    City varchar(15) not null,
+    State varchar(20) not null,
+    Zip_Code numeric(6) not null,
+     FOREIGN KEY (PersonId) REFERENCES People(PersonId)
+     );
+     
+   
+  CREATE TABLE addressbookattributes(
+	PersonId int,
+    AddressBookName varchar(20) unique not null,
+	AddressBookType varchar(20) not null,
+     FOREIGN KEY (PersonId) REFERENCES People(PersonId)
+   );
+   
