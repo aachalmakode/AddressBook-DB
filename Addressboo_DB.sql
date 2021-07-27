@@ -56,7 +56,15 @@ update addresbook set type='FRIEND' where first_name='Yash' or first_name='Minal
 update addressbook set type='PROFESSION' where first_name='Neha' or first_name='Vaishnavi';
 select * from addressbook;
 
-
 #UC10 To get num contacts by type
 select type, count(first_name) from addressbook group by type;
  select * from addressbook;
+ 
+#UC11 Ability to add Friend and family to each contact by adding a new column of name contact type
+ALTER TABLE addressbook ADD contact_type VARCHAR(50);
+UPDATE address_book SET contact_type = 'FRIEND' WHERE first_name = 'Yash';
+UPDATE address_book SET contact_type = 'FAMILY' WHERE first_name = 'Yash';
+UPDATE address_book SET contact_type = 'FAMILI' WHERE first_name = 'Aachal';
+UPDATE address_book SET contact_type = 'FRIEND' WHERE first_name = 'Neha';
+select * from addressbook;
+
