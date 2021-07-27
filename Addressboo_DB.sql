@@ -66,5 +66,6 @@ UPDATE address_book SET contact_type = 'FRIEND' WHERE first_name = 'Yash';
 UPDATE address_book SET contact_type = 'FAMILY' WHERE first_name = 'Yash';
 UPDATE address_book SET contact_type = 'FAMILI' WHERE first_name = 'Aachal';
 UPDATE address_book SET contact_type = 'FRIEND' WHERE first_name = 'Neha';
+
 select * from addressbook;
 
